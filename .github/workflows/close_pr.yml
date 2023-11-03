@@ -1,0 +1,14 @@
+name: Close Pull Request
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Anam020990/close-pull-request
+      with:
+        # Optional. Post a issue comment just before closing a pull request.
+        comment: "Congratulations! You have completed the lab. Closing for maintainence purpose."
